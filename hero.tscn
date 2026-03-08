@@ -8,11 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://b41ep5tgbvdnb" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/idle-05.png" id="5_86rat"]
 [ext_resource type="Texture2D" uid="uid://ccoc56ssgvcou" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/idle-06.png" id="6_kdsik"]
 [ext_resource type="Texture2D" uid="uid://dm8qcg5pf0mlb" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/run-01.png" id="7_sy5a3"]
+[ext_resource type="Texture2D" uid="uid://cgb11wsam18y1" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/jump-01.png" id="8_sy5a3"]
 [ext_resource type="Texture2D" uid="uid://d0slouct3h8nx" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/run-02.png" id="8_ubutb"]
 [ext_resource type="Texture2D" uid="uid://p78uopvtr5u3" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/run-03.png" id="9_esc0g"]
+[ext_resource type="Texture2D" uid="uid://6y0newu0oljl" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/jump-02.png" id="9_ubutb"]
+[ext_resource type="Texture2D" uid="uid://s472sqgipty5" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/jump-landing-01.png" id="10_esc0g"]
 [ext_resource type="Texture2D" uid="uid://cj6g5e76siu17" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/run-04.png" id="10_ntay5"]
+[ext_resource type="Texture2D" uid="uid://p73qiojdct14" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/jump-landing-02.png" id="11_ntay5"]
 [ext_resource type="Texture2D" uid="uid://dq43q17hbroy" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/run-05.png" id="11_yjkfw"]
 [ext_resource type="Texture2D" uid="uid://cf4xj227ueiao" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/run-06.png" id="12_iscwj"]
+[ext_resource type="Texture2D" uid="uid://4o0n4dsludm2" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/jump-landing-03.png" id="12_yjkfw"]
 [ext_resource type="Texture2D" uid="uid://sebrk1xh43jw" path="res://PixelPlatformerSet1v.1.1/Character/Sprite/run-07.png" id="13_fd4al"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ig7tw"]
@@ -38,6 +43,31 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_sy5a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ubutb")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_esc0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ntay5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yjkfw")
+}],
+"loop": true,
+"name": &"jump_landing",
 "speed": 5.0
 }, {
 "frames": [{
@@ -79,7 +109,7 @@ script = ExtResource("1_kh1b4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=171170520]
 sprite_frames = SubResource("SpriteFrames_ig7tw")
-animation = &"idle"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=98639392]
 position = Vector2(-4.5, 1.5)

@@ -75,6 +75,8 @@ script = ExtResource("1_kh1b4")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=188898345]
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1929145067]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=171170520]
 sprite_frames = SubResource("SpriteFrames_ig7tw")
 animation = &"idle"
